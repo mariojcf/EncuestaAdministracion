@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clasificador Generacional Profesional</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>🔬 Test de Clasificación Generacional</h1>
+        <p>Un proyecto de investigación social interactivo.</p>
+    </header>
+
+    <section class="card" id="step-1">
+        <h2>Registro del Participante</h2>
+        <div class="input-group">
+            <input type="text" id="userName" placeholder="Nombre completo">
+            <select id="userGender">
+                <option value="" disabled selected>Selecciona Sexo</option>
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+                <option value="Otro">Otro</option>
+            </select>
+            <input type="email" id="userEmail" placeholder="Correo electrónico">
+        </div>
+        <button onclick="iniciarQuiz()">Empezar Encuesta</button>
+    </section>
+
+    <section class="card hidden" id="step-2">
+        <div class="quiz-header">
+            <h3 id="pregunta-titulo">Cargando pregunta...</h3>
+            <span id="meta-info"></span>
+        </div>
+        <div id="opciones" class="options-grid"></div>
+    </section>
+
+    <section class="card">
+        <h2>📊 Informe General de Resultados</h2>
+        <div id="contador">Participantes registrados: 0 / 10</div>
+        
+        <div class="table-wrapper">
+            <table id="tabla-informe">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Sexo</th>
+                        <th>Generación</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <div class="chart-box">
+            <canvas id="canvasGrafico"></canvas>
+        </div>
+        
+        <button class="btn-danger" onclick="borrarDatos()">Restablecer Base de Datos</button>
+    </section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
