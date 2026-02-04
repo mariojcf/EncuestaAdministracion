@@ -113,3 +113,4 @@ function renderChart(lista) {
         options: { responsive: true, maintainAspectRatio: false }
     });
 }
+
